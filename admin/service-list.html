@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>[PA] Sklep Online v2 - Spis Usług</title>
+	<meta name="author" content="mtmcode">
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="../css/admin.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="shortcut icon" type="image/png" href="../images/fav.ico"/>
+	
+	<link href="../css/jquery.dataTables.min.css" rel="stylesheet" media="screen,projection">
+</head>
+<body>
+<div id="loader-wrapper">
+	<div class="loader">
+		Loading
+		<span></span>
+	</div>
+</div>
+
+	<!-- START: nav -->
+	<nav>
+		<ul id="slide-out" class="sidenav sidenav-fixed primary-color">
+			<li>
+				<ul class="collapsible ">
+					<li>
+						<div class="collapsible-header"><i class="large material-icons">home</i>Start</div>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="index.html"><i class="large material-icons">equalizer</i>Statystyki</a></li>
+								<li><a href="?"><i class="large material-icons">show_chart</i>Wykresy</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="active">
+						<div class="collapsible-header"><i class="large material-icons">shopping_basket</i>Usługi</div>
+						<div class="collapsible-body">
+							<ul>
+								<li class="active"><a href="service-list.html"><i class="large material-icons">reorder</i>Spis</a></li>
+								<li><a href="service-add.html"><i class="large material-icons">add_circle</i>Dodaj</a></li>
+								<li><a href="service-edit.html"><i class="large material-icons">edit</i>Edytuj</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header"><i class="large material-icons">people</i>Użytkownicy</div>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="user-list.html"><i class="large material-icons">reorder</i>Spis</a></li>
+								<li><a href="user-add.html"><i class="large material-icons">add_circle</i>Dodaj</a></li>
+								<li><a href="user-edit.html"><i class="large material-icons">edit</i>Edytuj</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header"><i class="large material-icons">settings</i>Konfiguracja</div>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="cfg-voucher.html"><i class="large material-icons">card_giftcard</i>Kupony</a></li>
+								<li><a href="?"><i class="large material-icons">storage</i>Serwery</a></li>
+								<li><a href="?"><i class="large material-icons">add_shopping_cart</i>Usługi</a></li>
+								<li><a href="?"><i class="large material-icons">account_balance</i>Sklep</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<div class="collapsible-header"><i class="large material-icons">info</i>Logi</div>
+						<div class="collapsible-body">
+							<ul>
+								<li><a href="?"><i class="large material-icons">perm_device_information</i>Formularzy</a></li>
+								<li><a href="?"><i class="large material-icons">shopping_basket</i>Kupna</a></li>
+								<li><a href="?"><i class="large material-icons">visibility</i>Administracji</a></li>
+							</ul>
+						</div>
+					</li>
+					<div class="login">
+						<li><a href="#!"><i class="large material-icons">exit_to_app</i>Wyloguj</a></li>
+						<li><a href="../index.html" target="_blank"><i class="large material-icons">undo</i>Sklep</a></li>
+					</div>
+					<li class="author">
+						<div>© 2021 <a href="http://mtmcode.eu">MTMcode</a></div>
+						<div>All rights reserved.</div>
+					</li>
+				</ul>
+			</li>	
+		</ul>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	</nav>	
+	
+	<!-- STOP: nav -->
+
+	<!-- START: content -->
+	
+	<div class="section" id="index-banner">
+		<div class="container">
+			<div class="row content pad primary-color">
+				<table id="service-list" class="table crap dataTable" style="font-size: 12px;">				
+					<thead>
+						<tr role="row">
+							<th style="width: 16px;">ID</th>
+							<th>Serwer</th>
+							<th>Usługa</th>
+							<th>Użytkownik</th>
+							<th>SteamID</th>
+							<th>Zakupiony</th>
+							<th>Wygasa</th>
+							<th style="width: 40px;">Gra</th>
+							<th style="width: 40px;">Status</th>
+							<th class="center" >Działanie</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr role="row">
+							<td>1</td>
+							<td>Only Mirage</td>
+							<td>Svip</td>
+							<td>Nickname</td>
+							<td>STEAM_1:1:1234567</td>
+							<td class="sorting_1"><span style="display: none;">zaczyna</span>2019/01/27 01:11</td>
+							<td><span style="display: none;">kończy</span>2019/02/26 01:11</td>
+							<td><img src="../images/csgo.png"><span style="display: none;">cs 1.6</span></td>
+							<td><i class="material-icons green-text">done</i><span style="display: none;">on włączone</span></td>
+							<td class="center">
+								<a class="action_button" href="service-edit.html"><i class="material-icons tooltipped grey-text" data-position="bottom" data-tooltip="Edytuj">mode_edit</i></a>
+								<a class="action_button" href="#!"><i class="material-icons tooltipped grey-text" data-position="bottom" data-tooltip="Dezaktywuj">delete_forever</i></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	<!-- STOP: content -->
+	
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+  <script>
+   $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+  </script>
+  
+  <script src="../js/jquery.dataTables.min.js"></script>
+  <script src="../js/base_tables_datatables.js"></script>
+  <script type="text/javascript">
+				var initDataTableFull = function() {
+					jQuery('table.crap').dataTable({
+						pageLength: 25,
+						lengthMenu: [[5, 10, 25, 50], [5, 10, 25, 50]],
+						order: [[ 5, "desc" ]],
+						deferRender: true,
+						columnDefs: [ {
+							targets: 9, 
+							orderable: false
+						}]
+					});
+				};
+	</script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+.sidenav {
+    height: 100%;
+}
+
+.sidenav li > a > i, .sidenav li > a > [class^="mdi-"], .sidenav li > a li > a > [class*="mdi-"], .sidenav li > a > i.material-icons {
+    margin: 0 1em 0 1em!important;
+}
+
+.sidenav li > a {
+    display: flex;
+}
+
+.sidenav .login {
+    margin-left: -1em;
+}
+
+.author {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 1em;
+    text-align: center;
+    line-height: 15px !important;
+}
+
+.author a {
+    display: inline;
+    font-size: 14px;
+    padding: 0;
+}
+
+a i.material-icons.tooltipped.grey-text {
+    transition: all 0.4s ease 0s
+}
+
+a i.material-icons.tooltipped.grey-text:hover {
+    color: #ef432a !important;
+}

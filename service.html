@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Sklep Online v2 - Usługi</title>
+	<meta name="author" content="mtmcode">
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="shortcut icon" type="image/png" href="images/fav.ico"/>
+</head>
+<body>
+<div id="loader-wrapper">
+	<div class="loader">
+		Loading
+		<span></span>
+	</div>
+</div>
+
+	<!-- START: nav -->
+	<nav>
+		<ul id="slide-out" class="sidenav sidenav-fixed primary-color">
+			<li><a href="index.html"><i class="large material-icons">home</i>Home</a></li>
+			<li><a class="active" href="service.html"><i class="large material-icons">shopping_basket</i>Usługi</a></li>
+			<li><a href="prices.html"><i class="large material-icons">attach_money</i>Cennik</a></li>
+			<li><a href="faq.html"><i class="large material-icons">info_outline</i>Faq</a></li>
+			<li><a href="regulations.html"><i class="large material-icons">insert_drive_file</i>Regulamin</a></li>
+			<li><a href="contact.html"><i class="large material-icons">contact_mail</i>Kontakt</a></li>
+			<li><a href="#" target="_blank"><i class="large material-icons">forum</i>Forum</a></li>
+			<li><a class="login" href="#!"><i class="large material-icons">vpn_key</i>Zaloguj</a></li>
+		</ul>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	</nav>	
+	
+	<!-- STOP: nav -->
+
+	<!-- START: content -->
+	
+	<div class="section" id="index-banner">
+		<div class="container">
+			<h1 class="header center secondary-color-text">Usługi</h1>
+			<div class="row content primary-color">
+				<div class="col s12">
+					<ul class="tabs">
+						<li class="tab disabled"><a a href="#none">Wybierz grę:</a></li>
+						<li class="tab"><a href="#cs16" onclick="mixer.filter('all');">Counter Strike 1.6</a></li>
+						<li class="tab"><a href="#csgo" onclick="mixer1.filter('all');">Counter Strike: Global Offensive</a></li>
+						<li class="tab"><a href="#mc">Minecraft</a></li>
+						<li class="tab"><a href="#forum">Forum</a></li>
+					</ul>
+				</div>
+
+				<div id="none">
+						<span style="padding: 9% 0 6% 0;display: block;text-align: center;color: rgba(255, 255, 255, 0.3);">Wybierz grę z menu powyżej.</span>
+				</div>
+
+				<div id="cs16">
+					<div class="controls col s12 m12 l2">
+						<button type="button" class="control" disabled="">Wybierz serwer:</button>
+						<div class="controls-overflow">
+							<button type="button" class="control" data-filter="all">Wszystkie</button>
+							<button type="button" class="control" data-filter=".DR110">Deathrun v1</button>
+							<button type="button" class="control" data-filter=".DR211">Deathrun v2</button>
+							<button type="button" class="control" data-filter=".GOMOD9">CS:GO Mod</button>
+						</div>
+					</div>
+					<div class="service16 col s12 m12 l10">
+						<div class="mix DR110 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">Deathrun v1</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix DR110 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">Zombie Premium</span>
+										<span class="server-title">Deathrun v1</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix DR110 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">Mutant Premium</span>
+										<span class="server-title">Deathrun v1</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix DR211 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">Deathrun v2</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix DR211 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">Nożownik Premium</span>
+										<span class="server-title">Deathrun v2</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix DR211 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">Zabójca Premium</span>
+										<span class="server-title">Deathrun v2</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix DR211 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">Strzelec Premium</span>
+										<span class="server-title">Deathrun v2</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix GOMOD9 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">CS:GO Mod</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix GOMOD9 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">SVIP</span>
+										<span class="server-title">CS:GO Mod</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div id="csgo">
+					<div class="controls col s12 m12 l2">
+						<button type="button" class="control" disabled="">Wybierz serwer:</button>
+						<div class="controls-overflow">
+							<button type="button" class="control" data-filter="all">Wszystkie</button>
+							<button type="button" class="control" data-filter=".MIR1">Only Mirage</button>
+							<button type="button" class="control" data-filter=".FFA5">Mirage/Cache/Inferno</button>
+							<button type="button" class="control" data-filter=".ARENA2">Arena 1VS1 #1</button>
+							<button type="button" class="control" data-filter=".ARENA213">Arena 1VS1 #2</button>
+							<button type="button" class="control" data-filter=".AWP3">Only AWP</button>
+							<button type="button" class="control" data-filter=".RT4">Retakes #1</button>
+							<button type="button" class="control" data-filter=".RT212">Retakes #2</button>
+							<button type="button" class="control" data-filter=".HNS214">Hide and Seek #2</button>
+							<button type="button" class="control" data-filter=".JB23">JailBreak</button>
+							<button type="button" class="control" data-filter=".SURF217">Surf Tier 1-2</button>
+							<button type="button" class="control" data-filter=".SURF115">Surf+Klasy</button>
+							<button type="button" class="control" data-filter=".COD16">Cod Mod</button>
+							<button type="button" class="control" data-filter=".DR16">Deathrun v1</button>
+							<button type="button" class="control" data-filter=".DR27">Deathrun v2</button>
+						</div>
+					</div>
+					<div class="servicego col s12 m12 l10">
+						<div class="mix MIR1 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">Only Mirage</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix MIR1 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">SVIP</span>
+										<span class="server-title">Only Mirage</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix FFA5 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">Mirage/Cache/Inferno</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix FFA5 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">SVIP</span>
+										<span class="server-title">Mirage/Cache/Inferno</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix ARENA2 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">Arena 1VS1 #1</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix ARENA213 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">Arena 1VS1 #2</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div id="mc">
+					<div class="servicemc col s12 m12 l10">
+						<div class="mix MC00 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">EasyHC</span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="mix MC00 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">SVIP</span>
+										<span class="server-title">EasyHC</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div id="forum">
+					<div class="serviceforum col s12 m12 l10">
+						<div class="mix FORUM24 col s12 m6 l4">
+							<form action="buy.html" method="post">
+								<div class="server" style="cursor: pointer;" onclick="javascript:this.parentNode.submit();">
+									<div class="server-content">
+										<span class="service-title">VIP</span>
+										<span class="server-title">Forum</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+	
+			</div>	  
+			<br><br>
+		</div>
+	</div>
+	
+	<!-- STOP: content -->
+
+	<!-- START: footer -->
+
+	<footer class="page-footer primary-color">
+		<div class="footer-copyright">
+			<div class="container">
+				Online Shop v2 by <a href="http://mtmcode.eu">MTMcode</a>
+				<span class="right">&copy; 2021 <a href="#" target="_blank">NazwaStrony.pl</a>, All rights reserved.</span>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- STOP: footer -->
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/service.js"></script>
+  <script>
+	$(document).ready(function(){
+		$('.tabs').tabs();
+	});
+	</script>
+  </body>
+</html>

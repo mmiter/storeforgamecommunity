@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Sklep Online v2 - Konto</title>
+	<meta name="author" content="hamp">
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/jquery.dataTables.min.css" rel="stylesheet" media="screen,projection">
+	<link rel="shortcut icon" type="image/png" href="images/fav.ico"/>
+</head>
+<body>
+<div id="loader-wrapper">
+	<div class="loader">
+		Loading
+		<span></span>
+	</div>
+</div>
+
+	<!-- START: nav -->
+	<nav>
+		<ul id="slide-out" class="sidenav sidenav-fixed primary-color">
+			<li><a href="index.html"><i class="large material-icons">home</i>Home</a></li>
+			<li><a href="service.html"><i class="large material-icons">shopping_basket</i>Usługi</a></li>
+			<li><a href="prices.html"><i class="large material-icons">attach_money</i>Cennik</a></li>
+			<li><a href="faq.html"><i class="large material-icons">info_outline</i>Faq</a></li>
+			<li><a href="regulations.html"><i class="large material-icons">insert_drive_file</i>Regulamin</a></li>
+			<li><a href="contact.html"><i class="large material-icons">contact_mail</i>Kontakt</a></li>
+			<li><a href="http://forum.arenaskilla.pl" target="_blank"><i class="large material-icons">forum</i>Forum</a></li>
+			<li><a class="login" href="#!"><i class="large material-icons">vpn_key</i>Wyloguj</a></li>
+		</ul>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	</nav>	
+	
+	<!-- STOP: nav -->
+
+	<!-- START: content -->
+	
+	<div class="section" id="index-banner">
+		<div class="container">
+			<h1 class="header center secondary-color-text">Konto</h1>
+			<div class="row center">
+				<div class="col s12 l3">
+					<div class="card content pad primary-color">
+						<img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/65/6501e566691e85209fa70aa57b60d555e20c48e8_full.jpg" style="width: 170px" class="avatar circle">
+						<br>Nickname<br>
+						STEAM_0:0:12345678<br>
+						<hr>
+						ID Konta: #35<br>
+						Liczba aktywnych usług: 1<br>
+						Liczba wygasłych usług: 5<br>
+					</div>
+				</div>
+				<div class="col s12 l9">
+					<div class="card content pad primary-color">
+						<div class="col s12">
+							<ul class="tabs">
+								<li class="tab"><a href="#wallet">Portfel</a></li>
+								<li class="tab"><a href="#services">Usługi</a></li>
+							</ul>
+						</div>
+						<div id="wallet">
+							<span style="padding: 9% 0 6% 0;display: block;text-align: center;color: rgba(255, 255, 255, 0.3);">Zakładka "Portfel" aktualnie niedostępna.</span>
+						</div>
+						<div id="services">
+							<table id="service-list" class="table responsive-table dataTable" style="font-size: 12px;">				
+								<thead>
+									<tr role="row">
+										<th>Gra</th>
+										<th>Serwer</th>
+										<th>Usługa</th>
+										<th>Nick</th>
+										<th>SteamID/Hasło</th>
+										<th>Data Zakupu</th>
+										<th>Data Wygaśnięcia</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr role="row">
+										<td><img src="images/csgo.png"><span style="display: none;">cs 1.6</span></td>
+										<td>Only Mirage</td>
+										<td>Svip</td>
+										<td>Nickname</td>
+										<td>STEAM_1:1:1234567</td>
+										<td class="sorting_1"><span style="display: none;">zaczyna</span>2020/01/27 01:11</td>
+										<td><span style="display: none;">kończy</span>2020/02/26 01:11</td>
+										<td><i class="material-icons green-text">done</i><span style="display: none;">on włączone</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>	
+				</div>
+			</div>
+			<br><br>
+		</div>
+	</div>
+	
+	<!-- STOP: content -->
+
+	<!-- START: footer -->
+
+	<footer class="page-footer primary-color">
+		<div class="footer-copyright">
+			<div class="container">
+				Online Shop v2 by <a href="http://mtmcode.eu">MTMcode</a>
+				<span class="right">&copy; 2021 <a href="#" target="_blank">NazwaStrony.pl</a>, All rights reserved.</span>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- STOP: footer -->
+
+
+  <!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.tabs').tabs();
+		});
+	</script>
+
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/base_tables_datatables.js"></script>
+	<script type="text/javascript">
+		var initDataTableFull = function() {
+			jQuery('table').dataTable({
+				pageLength: 25,
+				lengthMenu: [[5, 10, 25, 50], [5, 10, 25, 50]],
+				order: [[ 5, "desc" ]],
+				deferRender: true,
+				columnDefs: [ {
+					targets: 7, 
+					orderable: false
+				}]
+			});
+		};
+	</script>
+  </body>
+</html>

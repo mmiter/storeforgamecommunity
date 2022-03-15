@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Sklep Online v2 - Faq</title>
+	<meta name="author" content="hamp">
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="shortcut icon" type="image/png" href="images/fav.ico"/>
+</head>
+<body>
+<div id="loader-wrapper">
+	<div class="loader">
+		Loading
+		<span></span>
+	</div>
+</div>
+
+	<!-- START: nav -->
+	<nav>
+		<ul id="slide-out" class="sidenav sidenav-fixed primary-color">
+			<li><a href="index.html"><i class="large material-icons">home</i>Home</a></li>
+			<li><a class="active" href="service.html"><i class="large material-icons">shopping_basket</i>Usługi</a></li>
+			<li><a href="prices.html"><i class="large material-icons">attach_money</i>Cennik</a></li>
+			<li><a href="faq.html"><i class="large material-icons">info_outline</i>Faq</a></li>
+			<li><a href="regulations.html"><i class="large material-icons">insert_drive_file</i>Regulamin</a></li>
+			<li><a href="contact.html"><i class="large material-icons">contact_mail</i>Kontakt</a></li>
+			<li><a href="http://forum.arenaskilla.pl" target="_blank"><i class="large material-icons">forum</i>Forum</a></li>
+			<li><a class="login" href="#!"><i class="large material-icons">vpn_key</i>Zaloguj</a></li>
+		</ul>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	</nav>	
+	
+	<!-- STOP: nav -->
+
+	<!-- START: content -->
+	
+	<div class="section" id="index-banner">
+		<div class="container">
+			<h1 class="header center secondary-color-text">Kup</h1>
+			<h5 class="header center secondary-color-text">[CS16] DeathRun v1</h5>
+			<div class="row content pad primary-color wizard-content">
+				<form id="steps" class="validation-wizard wizard-circle wizard clearfix" action="#">
+					<h3>Płatność</h3>
+					<section>
+						<div class="input-field col s12">
+						<select id="payment" name="payment" class="browser-default required">
+						  <option value="" disabled selected>Wybierz płatność</option>
+						  <option value="1">SMS</option>
+						  <option value="2" disabled>PaySafeCard</option>
+						  <option value="3">Paypal</option>
+						  <option value="4">Przelew</option>
+						  <option value="5">Kupon</option>
+						  <option value="6">Inne płatności</option>
+						</select>
+						</div>
+					</section>
+					
+					<h3>Usługa</h3>
+					<section>
+						<div class="input-field col s12">
+						<select id="service" name="service" class="browser-default required" onchange="addTextField(this)">
+						  <option value="" disabled selected>Wybierz usługe</option>
+						  <option value="1">Vip</option>
+						  <option value="2">SuperVip</option>
+						  <option value="3">Fajki</option>
+						</select>
+						</div>
+						<div id="paymentSMS" class="input-field col s12">
+						<select id="days" name="value" class="browser-default required">
+						  <option value="" disabled selected>Wybierz wartość usługi</option>
+						  <option value="1">30 dni</option>
+						  <option value="2">90 dni</option>
+						</select>
+						<select id="amount" name="value" class="browser-default required">
+						  <option value="" disabled selected>Wybierz wartość usługi</option>
+						  <option value="1">20 fajek</option>
+						  <option value="2">50000 fajek</option>
+						</select>
+						</div>
+					</section>
+				 
+					<h3>Dane gracza</h3>
+					<section>
+							<div class="input-field col s12">
+							  <input id="name" name="name" type="text" class="required">
+							  <label for="name">Nick na serwerze</label>
+							</div>
+							<div class="input-field col s12">
+							  <input id="sid" name="sid" type="text" class="required">
+							  <label for="sid">STEAM ID (np. STEAM_1:1:1234567)</label>
+							</div>
+					</section>
+					
+					<h3>Potwierdzenie</h3>
+					<section>
+						<div id="potw"></div>
+					</section>
+					
+					<h3>Zakup</h3>
+					<section>
+							
+					</section>
+					
+				 
+					<h3>Koniec</h3>
+					<section>
+						<legend>Terms and Conditions</legend>
+						<input id="acceptTerms-2" name="acceptTerms" type="checkbox" class="required"> <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+					</section>
+				</form>
+				
+			</div>	  
+			<br><br>
+		</div>
+	</div>
+	
+	<!-- STOP: content -->
+
+	<!-- START: footer -->
+
+	<footer class="page-footer primary-color">
+		<div class="footer-copyright">
+			<div class="container">
+				Online Shop v2 by <a href="http://steamcommunity.com/id/hamp1k">hamp</a> 
+				<span class="right">&copy; 2018 <a href="http://arenaskilla.pl" target="_blank">ArenaSkilla.pl</a>, All rights reserved.</span>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- STOP: footer -->
+
+
+  <!--  Scripts-->  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/additional-methods.min.js"></script>
+  <script src="js/jquery.steps.min.js"></script>
+  <script src="js/buy.js"></script>
+  <script>
+  potw = document.getElementById("name");
+potw.innerHTML = wynik;
+  </script>
+  
+<script type="text/javascript">	
+	$(document).ready(function () {
+		toggleFieldsPayment(); 
+		$("#payment").change(function () {
+			toggleFieldsPayment();
+		});
+
+	});
+	// this toggles the visibility of other server
+	function toggleFieldsPayment() {
+		switch( $("#payment").val() ){
+			case '1':{
+				$("#paymentSMS").show();
+				$("#paymentPSC").hide();
+				$("#paymentPP").hide();
+				$("#paymentDP").hide();
+				$("#paymentKUPON").hide();
+				break;
+			}
+			case '2':{
+				$("#paymentSMS").hide();
+				$("#paymentPSC").show();
+				$("#paymentPP").hide();
+				$("#paymentDP").hide();
+				$("#paymentKUPON").hide();
+				break;
+			}
+			case '3':{
+				$("#paymentSMS").hide();
+				$("#paymentPSC").hide();
+				$("#paymentPP").show();
+				$("#paymentDP").hide();
+				$("#paymentKUPON").hide();
+				break;
+			}
+			case '4':{
+				$("#paymentSMS").hide();
+				$("#paymentPSC").hide();
+				$("#paymentPP").hide();
+				$("#paymentDP").show();
+				$("#paymentKUPON").hide();
+				break;
+			}
+			case '5':{
+				$("#paymentSMS").hide();
+				$("#paymentPSC").hide();
+				$("#paymentPP").hide();
+				$("#paymentDP").hide();
+				$("#paymentKUPON").show();
+				break;
+			}
+			default:{
+				$("#paymentSMS").hide();
+				$("#paymentPSC").hide();
+				$("#paymentPP").hide();
+				$("#paymentDP").hide();
+				$("#paymentKUPON").hide();
+				break;
+			}
+		}
+	}
+</script>
+  <script type="text/javascript"> 
+	$(document).ready(function(){
+		$('#days').hide();
+		$('#amount').hide();
+	$('#service').change(function () 
+	{ 
+		if( $('#service').val() == 3) 
+		{
+			$('#amount').show();
+			$('#days').hide();
+		} else if( $('#service').val() > 0) {
+				$('#days').show();
+				$('#amount').hide();
+		}
+	}); });
+</script>
+</script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+	<title>Sklep Online v2</title>
+	<meta name="author" content="mtmcode">
+
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link rel="shortcut icon" type="image/png" href="images/fav.ico"/>
+</head>
+<body>
+<div id="loader-wrapper">
+	<div class="loader">
+		Loading
+		<span></span>
+	</div>
+</div>
+
+	<!-- START: nav -->
+	<nav>
+		<ul id="slide-out" class="sidenav sidenav-fixed primary-color">
+			<li><a class="active" href="index.html"><i class="large material-icons">home</i>Home</a></li>
+			<li><a href="service.html"><i class="large material-icons">shopping_basket</i>Usługi</a></li>
+			<li><a href="prices.html"><i class="large material-icons">attach_money</i>Cennik</a></li>
+			<li><a href="faq.html"><i class="large material-icons">info_outline</i>Faq</a></li>
+			<li><a href="regulations.html"><i class="large material-icons">insert_drive_file</i>Regulamin</a></li>
+			<li><a href="contact.html"><i class="large material-icons">contact_mail</i>Kontakt</a></li>
+			<li><a href="#" target="_blank"><i class="large material-icons">forum</i>Forum</a></li>
+			<li><a class="login modal-trigger" href="#login"><i class="large material-icons">vpn_key</i>Zaloguj</a></li>
+		</ul>
+		<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+	</nav>	
+	
+	<!-- STOP: nav -->
+
+	<!-- START: content -->
+	
+	<div class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<h1 class="header center secondary-color-text">ONLINE Shop <sup>v2</sup></h1>
+			<div class="row center">
+				<h5 class="header col s12 light">Zautomatyzowany sklep dla serwerów <strong>Counter Strike</strong></h5>
+			</div>
+			<div class="row center">
+				<a href="service.html" id="download-button" class="btn-large waves-effect waves-light secondary-color">Zobacz oferte</a>
+			</div> 
+			<div class="row stats primary-color">
+				<div class="col s12 l4 stat">
+					<div class="card-stat">
+						<div class="card-content">
+							<div class="row stat">
+								<div class="col">
+									<h4>437</h4>
+									<span class="light">Klientów</span>
+								</div>
+								<div class="col right">
+									<div style="padding: 20px 0px 0px 0px;">
+										<i class="material-icons secondary-color-text stat" style="font-size: 4em;">people</i>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 l4 stat">
+					<div class="card-stat">
+						<div class="card-content">
+							<div class="row stat">
+								<div class="col">
+									<h4>148</h4>
+									<span class="light">Zakupów</span>
+								</div>
+								<div class="col right">
+									<div style="padding: 20px 0px 0px 0px;">
+										<i class="material-icons secondary-color-text stat" style="font-size: 4em;">shopping_cart</i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 l4 stat">
+					<div class="card-stat">
+						<div class="card-content">
+							<div class="row stat">
+								<div class="col">
+									<h4>14</h4>
+									<span class="light">Serwerów</span>
+								</div>
+								<div class="col right">
+									<div style="padding: 20px 0px 0px 0px;">
+										<i class="material-icons secondary-color-text stat" style="font-size: 4em;">storage</i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	  
+			<br><br>
+		</div>
+	</div>
+	
+	<!-- STOP: content -->
+
+	<!-- START: footer -->
+
+	<footer class="page-footer primary-color">
+		<div class="footer-copyright">
+			<div class="container">
+				Online Shop v2 by <a href="http://mtmcode.eu">MTMcode</a>
+				<span class="right">&copy; 2021 <a href="#" target="_blank">NazwaStrony.pl</a>, All rights reserved.</span>
+			</div>
+		</div>
+	</footer>
+	
+	<!-- STOP: footer -->
+	
+	<div id="login" class="modal">
+		<div class="modal-content">
+			<h4 class="header center secondary-color-text">Zaloguj się</h4>
+			<form action="profile.html">
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="name" type="text" class="validate">
+						<label for="name">Login</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="password" type="password" class="validate">
+						<label for="password">Hasło</label>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn waves-effect waves-light secondary-color">Zaloguj</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script> 
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+  </script>
+  </body>
+</html>
