@@ -5,9 +5,9 @@ Front-end of an online store for the game servers site
 
 
 ## Demo
-[Store](https://mtmcode.eu/demo/shop/)
+[Store](https://mmiter.github.io/storeforgamecommunity/)
 
-[Admin panel](https://mtmcode.eu/demo/shop/admin)
+[Admin panel](https://mmiter.github.io/storeforgamecommunity/admin)
 
 ## Features
 * RWD
